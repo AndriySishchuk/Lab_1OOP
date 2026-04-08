@@ -27,17 +27,19 @@ void scaleMoney(Money& item, int count) {
     item.kop *= count; 
     fixMoney(item);    
 }
-
-void roundToNbu(Money& money) {
-    int last = money.kop % 10;
+void roundKop(Money& money) {
     
-    if (last >= 1 && last <= 4) {
+    int last = money.kop % 10;
+      
+    if (last == 0) return;
+
+    if (last >= 1 && last <= 3) {
         money.kop -= last;
     } 
-    else if (last >= 5) {
+    else if (last >= 4 && last <= 9) {
         money.kop += (10 - last);
     }
-    
+
     fixMoney(money);
 }
 
