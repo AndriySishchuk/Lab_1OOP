@@ -1,2 +1,2 @@
-Bread 15 04 1
-Juice 40 00 2
+Bread 32 50 4
+Juice 25 11 3

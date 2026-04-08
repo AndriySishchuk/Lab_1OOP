@@ -27,10 +27,9 @@ void scaleMoney(Money& item, int count) {
     item.kop *= count; 
     fixMoney(item);    
 }
-void roundKop(Money& money) {
-    
+void roundKop(Money& money) {       
     int last = money.kop % 10;
-      
+
     if (last == 0) return;
 
     if (last >= 1 && last <= 3) {
@@ -76,7 +75,7 @@ void processFile(const char* fileName) {
     cout << "Amount Without Rounding: ";
     printMoney(totalSum);
 
-    roundToNbu(totalSum);
+    roundKop(totalSum);
 
     cout << "Amount to pay: ";
     printMoney(totalSum);

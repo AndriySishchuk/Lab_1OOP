@@ -7,7 +7,7 @@ struct Money {
 
 void addPayment(Money& total, Money bonus);
 void scaleMoney(Money& item, int count);
-void roundToNbu(Money& money);
+void roundKop(Money& money);
 void printMoney(const Money& money);
 void processFile(const char* fileName);
 
